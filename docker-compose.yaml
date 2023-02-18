@@ -6,5 +6,7 @@ services:
     build:
       context: ./fastapi_server
       dockerfile: Dockerfile
+    volumes:
+      - ./fastapi_server /code/app
     ports:
       - 5001:80
