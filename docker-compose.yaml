@@ -7,4 +7,4 @@ services:
       context: ./fastapi_server
       dockerfile: Dockerfile
     ports:
-      - 5002:80
+      - 5001:80
