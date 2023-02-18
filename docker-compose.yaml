@@ -11,7 +11,8 @@ services:
     ports:
       - 5001:80
 volumes:
-  fastapiapp: ~/fastapi_server
+  fastapiapp: 
+    ext:
 
 
 
