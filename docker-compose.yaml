@@ -2,7 +2,6 @@ version: "3"
 
 services:
   fastapiserver: 
-    image: v1
     build:
       context: ./fastapi_server
       dockerfile: Dockerfile
@@ -10,8 +9,3 @@ services:
       - ./fastapi_server:/code/app
     ports:
       - 5001:80
-
-
-
-
-
