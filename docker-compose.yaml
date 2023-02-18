@@ -1,12 +1,15 @@
 version: "3"
 
-#
 services:
   fastapiserver: 
+    image: v1
     build:
       context: ./fastapi_server
       dockerfile: Dockerfile
     volumes:
-      - ./fastapi_server /code/app
+      - fastapiapp:/code/app
     ports:
       - 5001:80
+volumes:
+  fastapiapp:
+    ext
