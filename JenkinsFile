@@ -6,9 +6,9 @@ pipeline {
         stage("Prune Docker Environment") {
             steps {
                 sh "echo starting pruning stage"
-                sh "docker compose -p test-docker-stack down"
+                sh "docker compose -p test-docker-stack-pipeline down"
                 sh "docker image prune -a -f"
-                sh "echo this stage ran I think?"
+                sh "echo ending pruning stage"
             }
         }
         stage("Start Docker-Compose Stack") {
