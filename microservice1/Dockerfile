@@ -8,6 +8,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
  
 COPY . /code/app
  
-CMD ["uvicorn", "app.main:app", "--port", "81", "--reload"]
-
-
+CMD ["uvicorn", "app.main:app", "--host", "microservice1", "--port", "81", "--reload"]
