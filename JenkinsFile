@@ -5,10 +5,10 @@ pipeline {
     stages {
         stage("Prune Docker Environment") {
             steps {
-                sh "echo starting pruning stage"
+                sh "echo Starting pruning stage"
                 sh "docker compose -p test-docker-stack-pipeline down"
                 sh "docker image prune -a -f"
-                sh "echo ending pruning stage"
+                sh "echo Ending pruning stage"
             }
         }
         stage("Start Docker-Compose Stack") {
