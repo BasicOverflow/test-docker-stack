@@ -13,7 +13,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "tit milk"}
+    return {"Hello": "poo"}
 
 
 @app.get("/callback") 
