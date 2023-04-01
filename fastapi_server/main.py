@@ -28,4 +28,3 @@ async def callback():
     
     return {"data from microservice": response.text}
 
-
