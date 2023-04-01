@@ -1,0 +1,22 @@
+pipeline {
+
+    agent {
+        label "test-*"
+    }
+
+    stages {
+
+        stage("Prune Docker Environment") {
+            steps {
+                sh "docker compose -p test-docker-stack down"
+                sh "docker image prune -a"
+            }
+        }
+
+        stage("Start Docker-Compose Stack") {
+            steps {
+                sh "docker compose up -d --wait"
+            }
+        }
+    }
+}
