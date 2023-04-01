@@ -18,3 +18,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./microservice1:/code/app
+
