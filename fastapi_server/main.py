@@ -21,7 +21,7 @@ async def callback():
     # handle the response from the other server
     # ...
     
-    return str(data)
+    return str(data.text)
 
 
 
@@ -32,7 +32,7 @@ async def callback():
 #         callback_url = "http://www.google.com" 
 #         data = await client.get(callback_url)
     
-#     print(data)
+#     print(data.text)
 
 
 # import asyncio
