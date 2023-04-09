@@ -16,12 +16,12 @@ async def callback():
     # make a callback to another server
     async with httpx.AsyncClient() as client:
         callback_url = "http://microservice1:81/test" 
-        data = await str(client.get(callback_url))
+        data = await client.get(callback_url)
     
     # handle the response from the other server
     # ...
     
-    return data
+    return str(data)
 
 
 
