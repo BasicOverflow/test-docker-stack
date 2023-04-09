@@ -21,5 +21,25 @@ async def callback():
     # handle the response from the other server
     # ...
     
-    return {"data from microservice": data}
+    return data
+
+
+
+
+
+# async def test():
+#     async with httpx.AsyncClient() as client:
+#         callback_url = "http://www.google.com" 
+#         data = await client.get(callback_url)
+    
+#     print(data)
+
+
+# import asyncio
+
+# asyncio.run(test())
+
+
+
+
 
